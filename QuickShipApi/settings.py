@@ -67,6 +67,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -100,6 +101,7 @@ WSGI_APPLICATION = 'QuickShipApi.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+   
 }
 
 

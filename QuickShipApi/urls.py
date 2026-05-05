@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path, include
-from django.urls import path
+from django.shortcuts import redirect
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -10,7 +10,7 @@ from rest_framework_simplejwt.views import (
 )
 
 urlpatterns = [
-    path('', lambda req: redirect('api/docs/'))
+    path('', lambda req: redirect('api/docs/')),
     path('admin/', admin.site.urls),
     #JWT
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

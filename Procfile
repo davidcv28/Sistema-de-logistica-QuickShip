@@ -1,1 +1,1 @@
-web: gunicorn QuickShipApi.wsgi
+web: python manage.py migrate && gunicorn QuickShipApi.wsgi
